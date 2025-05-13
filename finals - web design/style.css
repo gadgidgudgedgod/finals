@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #111;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px; /* Assuming 1em = 16px */
+  letter-spacing: 1px;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* VIDEO BACKGROUND */
+.video-background {
+  position: relative;
+  height: 1080px; /* Assuming 100vh = 1080px */
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  padding: 0 20px;
+}
+
+.video-content h1 {
+  font-size: 48px; /* Assuming 3em = 48px */
+  font-weight: normal;
+}
+
+/* PORTFOLIO */
+.portfolio h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+  font-size: 32px; /* Assuming 2em = 32px */
+  margin-bottom: 40px;
+  font-family: 'Georgia', serif;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ABOUT */
+.about p {
+  font-family: 'Georgia', serif;
+  font-size: 17.6px; 
+  line-height: 1.8;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CONTACT */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14.4px; /* Assuming 0.9em = 14.4px */
+  color: black;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px; /* Assuming 2em = 32px */
+    padding: 0 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+}
